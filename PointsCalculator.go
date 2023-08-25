@@ -30,8 +30,6 @@ func calculatePoints(receipt Receipt) int {
 //
 // Returns the earned points.
 func getRetailerPoints(receipt Receipt) int {
-	//TODO: figure out if we need to validate the retailer string
-	//		the provided pattern implies no whitespace allowed, but the examples clearly allow spaces
 	strippedRetailerName := nonAlphaNumericRegex.ReplaceAllString(receipt.Retailer, "")
 	return len(strippedRetailerName)
 }
