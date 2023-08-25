@@ -34,9 +34,7 @@ var receipts map[string]int
 var nonAlphaNumericRegex = regexp.MustCompile("[^A-Za-z0-9]+")
 
 func main() {
-
-	// General TODO:
-	// 	- Split the points calculation from the validation?
+	
 	receipts = make(map[string]int)
 	router := mux.NewRouter()
 
